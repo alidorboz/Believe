@@ -5,10 +5,29 @@ $sections = Section::sections();
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">Winkel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="images/front_images/believe.png" alt="Believe" style="border: 2px solid white; width: 100px;">
+        </a>
+        
+<style>
+    <style>
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+    }
+    .nav-link {
+        color: #000;
+        font-weight: 500;
+    }
+    .dropdown-item {
+        font-weight: 500;
+    }
+</style>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+            Menu
         </button>
         
 
@@ -36,8 +55,13 @@ $sections = Section::sections();
 
                 <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="{{ url('orders') }}" class="nav-link">Orders</a></li>
-                <li class="nav-item cta cta-colored"><a href="{{ url('cart') }}" class="nav-link">Cart[<span
-                            class="totalCartItems">{{ totalCartItems() }}</span>]</a></li>
+                <li class="nav-item cta cta-colored">
+                    <a href="{{ url('cart') }}" class="nav-link">
+                      <span class="fas fa-shopping-cart"></span> [<span class="totalCartItems">{{ totalCartItems() }}</span>]
+                    </a>
+                  </li>
+                  
+                  
                 @if (Auth::check())
                     <li class="nav-item"><a href="{{ url('account') }}" class="nav-link">My Account</a></li>
                     <li class="nav-item"><a href="{{ url('logout') }}" class="nav-link">LogOut</a></li>

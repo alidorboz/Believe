@@ -42,23 +42,21 @@
             <tr>
                 <td>
                     <div class="control-group text-center">
-                        <div style="float:left; margin-top:-2px; margin-right:5px;">
-                            <input type="radio" id="address{{ $address['id'] }}" name="address_id"
-                                value="{{ $address['id'] }}">
+                        <div style="float:right; margin-top:-2px; margin-left:5px;">
+                            <input type="radio" id="address{{ $address['id'] }}" name="address_id" value="{{ $address['id'] }}">
                         </div>
                         <div>
                             <label class="control-label">{{ $address['name'] }}, {{ $address['address'] }},
-                                {{ $address['governorate'] }},
-                                {{ $address['delegation'] }}, {{ $address['pincode'] }}
+                                {{ $address['governorate'] }}, {{ $address['delegation'] }}, {{ $address['pincode'] }}
                             </label>
                         </div>
                     </div>
                 </td>
-                <td><a href="{{ url('/add-edit-delivery-address/' . $address['id']) }}">Edit</a> <a
-                        href="{{ url('/delete-delivery-address/' . $address['id']) }}"class="addressDelete">Delete</a></td>
+                <td><a href="{{ url('/add-edit-delivery-address/' . $address['id']) }}">Edit</a> <a href="{{ url('/delete-delivery-address/' . $address['id']) }}" class="addressDelete">Delete</a></td>
             </tr>
         @endforeach
     </table>
+    
 
 
     <section class="ftco-section ftco-cart">

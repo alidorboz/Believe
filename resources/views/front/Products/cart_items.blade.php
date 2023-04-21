@@ -48,7 +48,7 @@ use App\Models\Product;
                 <span class="input-group-btn mr-2">
                     <button type="button" class="quantity-left-minus btn" data-cartid="{{ $item['id'] }}"
                         onclick="updateQuantity(-1, this)">
-                        <i class="ion-ios-remove">-</i>
+                        <i class="fas fa-minus"></i>
                     </button>
                 </span>
                 <input type="text" id="quantity_{{ $item['id'] }}" name="quantity"
@@ -56,10 +56,11 @@ use App\Models\Product;
                 <span class="input-group-btn ml-2">
                     <button type="button" class="quantity-right-plus btn" data-cartid="{{ $item['id'] }}"
                         onclick="updateQuantity(1, this)">
-                        <i class="ion-ios-add">+</i>
+                        <i class="fas fa-plus"></i>
                     </button>
                 </span>
             </td>
+            
             <script>
                 function updateQuantity(delta, button) {
                     let quantityInput = document.getElementById(`quantity_${button.dataset.cartid}`);

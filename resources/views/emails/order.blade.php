@@ -59,7 +59,7 @@
             @endforeach
             <tr>
                 <td colspan="5" style="padding: 8px; text-align: right;">Shipping Charges</td>
-                <td style="padding: 8px;">{{ $orderDetails['shipping_charges'] }} TND</td>
+                <td style="padding: 8px;">7 TND</td>
             </tr>
             <tr>
                 <td colspan="5" style="padding: 8px; text-align: right;">Coupon Discount</td>

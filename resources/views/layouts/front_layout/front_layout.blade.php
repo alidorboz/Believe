@@ -25,6 +25,10 @@
     <link rel="stylesheet"  href="{{url('css/front_css/flaticon.css')}}">
     <link rel="stylesheet" href="{{url('css/front_css/icomoon.css')}}">
     <link rel="stylesheet" href="{{url('css/front_css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha512-7Gn1J">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
     <style>
       form.cmxform label.error, label.error {
         color:red;

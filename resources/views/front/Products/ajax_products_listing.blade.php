@@ -1,3 +1,4 @@
+
 <?php use App\Models\Product ;?>
 
 <div class="row">
@@ -30,8 +31,8 @@
                         </div>
                     </div>
                     <p class="bottom-area d-flex px-3">
-                        <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                        <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        <a href="{{url('product/'.$product['id'])}}" class="add-to-cart text-center py-2 mr-1"><span><i class="fas fa-eye"></i> View</span></a>
+
                     </p>
                 </div>
             </div>

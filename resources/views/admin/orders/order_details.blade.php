@@ -63,7 +63,7 @@ use App\Models\User;
                                         </tr>
                                         <tr>
                                             <td>Shipping Charges</td>
-                                            <td>{{ $orderDetails['shipping_charges'] }} TND</td>
+                                            <td>7 TND</td>
                                         </tr>
                                         <tr>
                                             <td>Coupon Code</td>

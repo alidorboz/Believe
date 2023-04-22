@@ -26,8 +26,12 @@
                             <option value="product_latest" @if (isset($_GET['sort']) && $_GET['sort'] == 'product_latest') selected="" @endif>Latest Products</option>
                             <option value="product_name_a_z" @if (isset($_GET['sort']) && $_GET['sort'] == 'product_name_a_z') selected="" @endif>Product name A - Z</option>
                             <option value="product_name_z_a" @if (isset($_GET['sort']) && $_GET['sort'] == 'product_name_z_a') selected="" @endif>Product name Z - A</option>
-                            <option value="price_lowest" @if (isset($_GET['sort']) && $_GET['sort'] == 'price_lowest') selected="" @endif>Lowest Price first</option>
+                          <?php //  <option value="price_lowest" @if (isset($_GET['sort']) && $_GET['sort'] == 'price_lowest') selected="" @endif>Lowest Price first</option>
+                          ?>
                             <option value="price_highest" @if (isset($_GET['sort']) && $_GET['sort'] == 'price_highest') selected="" @endif>Highest Price first</option>
+                            <option value="discounted_price" @if(isset($_GET['sort']) && $_GET['sort'] == 'discounted_price') selected @endif>Lowest Price first</option>
+
+
                         </select>
                     </div>
                 </div>

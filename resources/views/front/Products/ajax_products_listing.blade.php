@@ -17,7 +17,8 @@
                 <div class="overlay"></div>
                 <div class="text py-3 px-3">
                     <a href="{{url('product/'.$product['id'])}}"><h3>{{ $product['product_name'] }}</h3></a>
-                    <?php $discounted_price = Product::getDiscountedPrice($product['id']); ?>
+                    <?php $discounted_price = Product::getDiscountedPrice($product->id); // assign a value
+                    ?>
                     <div class="d-flex">
                         <div class="pricing" style="display: inline-block;">
                             <p class="price">

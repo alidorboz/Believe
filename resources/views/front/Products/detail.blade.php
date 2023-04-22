@@ -1,7 +1,7 @@
-<?php use App\Models\Product; ?>
-
 @extends('layouts.front_layout.front_layout')
 @section('content')
+    <?php use App\Models\Product; ?>
+
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -54,29 +54,30 @@
                         @endif
                     </p>
                     @if (count($groupProducts) > 0)
-                    <div>
-                      <div><strong>More Colors</strong></div>
-                      <div style="margin-top:5px;">
-                        @foreach ($groupProducts as $product)
-                        <a href="{{url('product/'.$product['id'])}}"><span class="color-circle" style="background-color: {{ $product['product_color'] }};"></span></a>
-                        @endforeach
-                      </div>
-                    </div>
-                    <br>
-                  @endif
-                  
-                  <style>
-                    .color-circle {
-                      display: inline-block;
-                      width: 20px;
-                      height: 20px;
-                      margin-right: 5px;
-                      border-radius: 50%;
-                      border: 1px solid #ccc;
-                    }
-                  </style>
-                  
-                  
+                        <div>
+                            <div><strong>More Colors</strong></div>
+                            <div style="margin-top:5px;">
+                                @foreach ($groupProducts as $product)
+                                    <a href="{{ url('product/' . $product['id']) }}"><span class="color-circle"
+                                            style="background-color: {{ $product['product_color'] }};"></span></a>
+                                @endforeach
+                            </div>
+                        </div>
+                        <br>
+                    @endif
+
+                    <style>
+                        .color-circle {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 5px;
+                            border-radius: 50%;
+                            border: 1px solid #ccc;
+                        }
+                    </style>
+
+
 
                     <p>{{ $productDetails['description'] }}
                     </p>
@@ -85,30 +86,32 @@
                             <div class="form-group d-flex">
                                 <div class="select-wrap">
                                     <div class="icon"><span class="fas fa-chevron-down"></span></div>
-                                    <select name="size" id="getPrice" product-id="{{ $productDetails['id'] }}" class="form-control">
+                                    <select name="size" id="getPrice" product-id="{{ $productDetails['id'] }}"
+                                        class="form-control">
                                         <option value="">Size</option>
                                         @foreach ($productDetails['attributes'] as $attribute)
                                             <option value="{{ $attribute['size'] }}">{{ $attribute['size'] }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="input-group col-md-6 d-flex mb-3">
                             <span class="input-group-btn mr-2">
                                 <button type="button" class="quantity-left-minus btn" onclick="updateQuantity(-1)">
-                                  <span class="fas fa-minus"></span>
+                                    <span class="fas fa-minus"></span>
                                 </button>
-                              </span>
-                              <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100" onchange="validateQuantity()">
-                              <span class="input-group-btn ml-2">
+                            </span>
+                            <input type="text" id="quantity" name="quantity" class="form-control input-number"
+                                value="1" min="1" max="100" onchange="validateQuantity()">
+                            <span class="input-group-btn ml-2">
                                 <button type="button" class="quantity-right-plus btn" onclick="updateQuantity(1)">
-                                  <span class="fas fa-plus"></span>
+                                    <span class="fas fa-plus"></span>
                                 </button>
-                              </span>
-                              
+                            </span>
+
                         </div>
 
                         <script>
@@ -156,7 +159,6 @@
             <div class="row justify-content-center mb-3 pb-3">
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h2 class="mb-4">Complete Your Style</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
                 </div>
             </div>
 
@@ -179,7 +181,9 @@
                                         class="price-sale">{{ $product['product_price'] }} TND</span></h3>
 
 
-                                        <a href="{{url('product/'.$product['id'])}}" class="add-to-cart text-center py-2 mr-1"><span><i class="fas fa-eye"></i> View</span></a>
+                                <a href="{{ url('product/' . $product['id']) }}"
+                                    class="add-to-cart text-center py-2 mr-1"><span><i class="fas fa-eye"></i>
+                                        View</span></a>
 
                             </div>
                         </div>

@@ -1,7 +1,5 @@
 <?php use App\Models\Product; ?>
-
 @extends('layouts.front_layout.front_layout')
-
 @section('content')
     <div class="container">
         <ul class="breadcrumb">
@@ -29,7 +27,7 @@
                         </tr>
                         <tr>
                             <td>Shipping Charges</td>
-                            <td>{{$orderDetails['shipping_charges']}} TND</td>
+                            <td>7 TND</td>
                         </tr>
                         <tr>
                             <td>Coupon Code</td>
